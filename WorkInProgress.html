@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Работы ведутся</title>
+    <link rel="stylesheet" href="SMALLSTYLE.css" />
+    <link rel="stylesheet" href="MAINSTYLE.css" />
+    <link rel="stylesheet" href="Loading.css" />
+  </head>
+
+  <header>
+    <div class="loading">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+
+    <button
+      class="my-btn"
+      onclick="window.location.href='index.html'"
+      title="MAIN"
+    >
+      Главная
+    </button>
+  </header>
+
+  <body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>Work in progress</h1>
+  </body>
+
+  <script>
+    const loadingElement = document.querySelector(".loading");
+    const bodyElement = document.querySelector("body");
+
+    function removeLoading() {
+      loadingElement.remove();
+      bodyElement.classList.remove("loading-active");
+    }
+    setTimeout(removeLoading, 1000);
+    bodyElement.classList.add("loading-active");
+  </script>
+</html>

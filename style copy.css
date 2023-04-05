@@ -1,0 +1,86 @@
+/*-----------ТЕЛО-----------*/
+body {
+  background: #42455a;
+}
+
+p {
+  font-size: 26px;
+}
+
+/*-----------ССЫЛКИ-----------*/
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  padding: 11px;
+  font-size: 26px;
+  background-color: #2c363f;
+  color: #00ba78;
+  text-decoration: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  width: 360px;
+}
+
+a:hover {
+  color: #333;
+  background-color: #00ba78;
+}
+
+
+
+/*-----------КНОПКА-----------*/
+.my-btn {
+  color: #00ba78;
+  display: block;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #222;
+  text-decoration: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.my-btn:hover {
+  color: #333;
+  background-color: #00ba78;
+}
+
+/*-----------ТАБЛИЦА-----------*/
+table {
+  margin: auto;
+  width: auto;
+  border-collapse: separate;
+  border-spacing: 1px;
+}
+
+th {
+  border: 1px solid #6c698d;
+  padding: 8px;
+  text-align: center;
+}
+
+td a,
+th a {
+  padding: 8px;
+}
+
+td {
+  padding: 1px;
+  text-align: center;
+}

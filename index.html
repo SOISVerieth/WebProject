@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главная Страница</title>
+    <link rel="stylesheet" href="SMALLSTYLE.css" />
+    <link rel="stylesheet" href="MAINSTYLE.css" />
+    <link rel="stylesheet" href="FixikiKAZTUBE.css" />
+    <link rel="stylesheet" href="scroll.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <button id="toggle-menu">☰</button>
+        <a href="#home" class="active">Главная</a>
+        <a href="#links">Ссылки</a>
+        <a href="about.html">Кто</a>
+        <a href="#license">
+          <div class="tooltip">
+            <span>ⓘИнформация</span>
+            <div class="tooltiptext">
+              <p>
+                Сайт был выполнен из огрызков и опилок студентом группы П-01
+              </p>
+            </div>
+          </div>
+        </a>
+      </nav>
+    </header>
+
+    <div class="sidebar">
+      <section>
+        <form>
+          <label for="name">Логин</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="password">Пароль</label>
+          <input type="password" id="password" name="password" required />
+
+          <input type="submit" value="Войти" />
+        </form>
+      </section>
+    </div>
+
+    <section id="home">
+      <h1>
+        <div class="container reveal">
+          <h2 class="title">
+            <span class="title-word title-word-1">Команда</span> <br />
+            <span class="title-word title-word-2">Фиксиков</span> <br />
+            <span class="title-word title-word-3">Представляет</span> <br />
+            <span class="title-word title-word-4">VideoTube </span><br />
+            <span class="title-word title-word-5"> &#8595; </span>
+          </h2>
+        </div>
+      </h1>
+    </section>
+
+    <section id="links">
+      <div class="container reveal">
+        <h2>Выполненые работы</h2>
+        <div class="text-container">
+          <div class="text-box">
+            <h2>Ссылки</h2>
+            <br /><br />
+            <table>
+              <tr>
+                <td>
+                  <a href="lab1.html" title="Процессор"
+                    ><img
+                      src="5.jpg"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Лабораторная работа 01.03</a
+                  >
+                </td>
+                <td>
+                  <a href="lab2.1.html" title="Часть 1"
+                    ><img
+                      src="3.jpg"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Лабораторная работа 15.03</a
+                  >
+                </td>
+                <td>
+                  <a href="lab2.2.html" title="Часть 2"
+                    ><img
+                      src="1.jpg"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Лабораторная работа 15.03</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="WorkInProgress.html" title="Скоро"
+                    ><img
+                      src="8.png"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Скоро</a
+                  >
+                </td>
+                <td>
+                  <a href="WorkInProgress.html" title="Скоро"
+                    ><img
+                      src="9.png"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Скоро</a
+                  >
+                </td>
+                <td>
+                  <a href="WorkInProgress.html" title="Скоро"
+                    ><img
+                      src="10.jpg"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Скоро</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <a href="WorkInProgress.html" title="Скоро"
+                    ><img
+                      src="11.jpg"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Скоро</a
+                  >
+                </td>
+                <td>
+                  <a href="WorkInProgress.html" title="Скоро"
+                    ><img
+                      src="6.png"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Скоро</a
+                  >
+                </td>
+                <td>
+                  <a href="WorkInProgress.html" title="Скоро"
+                    ><img
+                      src="2.png"
+                      alt="FON"
+                      width="100%"
+                      height="60%"
+                      style="display: block; border: 2px solid black"
+                    />Скоро</a
+                  >
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id=""></section>
+    <script>
+      const toggleMenu = document.getElementById("toggle-menu");
+      const sidebar = document.querySelector(".sidebar");
+
+      toggleMenu.addEventListener("mouseenter", () => {
+        sidebar.classList.add("show");
+      });
+
+      sidebar.addEventListener("mouseleave", () => {
+        sidebar.classList.remove("show");
+      });
+    </script>
+
+    <script src="InfiniteScroll.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
