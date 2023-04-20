@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Работы ведутся</title>
+    <link rel="stylesheet" href="SMALLSTYLE.css" />
+    <link rel="stylesheet" href="MAINSTYLE.css" />
+    <link rel="stylesheet" href="Loading.css" />
+  </head>
+
+  <header>
+    <div class="loading">
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+      <div class="loading-bar"></div>
+    </div>
+
+    <button
+      class="my-btn"
+      onclick="window.location.href='index.html'"
+      title="MAIN"
+    >
+      Главная
+    </button>
+  </header>
+
+  <body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+      "
+    >
+      <img
+        src="rickroll-roll.gif"
+        alt="rickroll-roll"
+        style="border: 2px solid black; border-radius: 10px"
+      />
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: row;
+          margin-top: 20px;
+          background-color: white;
+          padding: 10px;
+          border-radius: 10px;
+        "
+      >
+        <span
+          id="likeBtn"
+          style="
+            font-size: 24px;
+            margin-right: 10px;
+            padding: 5px 20px;
+            background-color: #4caf50;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+          onclick="like()"
+          >👍</span
+        >
+        <span id="likes" style="font-size: 24px; margin-right: 20px"></span>
+        <span
+          id="dislikeBtn"
+          style="
+            font-size: 24px;
+            margin-right: 10px;
+            padding: 5px 20px;
+            background-color: #ff5733;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+          onclick="dislike()"
+          >👎</span
+        >
+        <span id="dislikes" style="font-size: 24px"></span>
+      </div>
+    </div>
+
+    <script>
+      // Случайное количество лайков и дизлайков
+      var likes = Math.floor(Math.random() * 100);
+      var dislikes = Math.floor(Math.random() * 100);
+
+      // Вставляем количество лайков и дизлайков в элементы на странице
+      document.getElementById("likes").textContent = likes;
+      document.getElementById("dislikes").textContent = dislikes;
+
+      var likeBtn = document.getElementById("likeBtn");
+      var dislikeBtn = document.getElementById("dislikeBtn");
+
+      var isLiked = false;
+      var isDisliked = false;
+
+      // Функция для увеличения количества лайков
+      function like() {
+        if (isLiked) {
+          likes--;
+          document.getElementById("likes").textContent = likes;
+          likeBtn.style.backgroundColor = "#4CAF50";
+          likeBtn.style.color = "white";
+          isLiked = false;
+        } else {
+          likes++;
+          document.getElementById("likes").textContent = likes;
+          likeBtn.style.backgroundColor = "green";
+          likeBtn.style.color = "white";
+          if (isDisliked) {
+            dislikes--;
+            document.getElementById("dislikes").textContent = dislikes;
+            dislikeBtn.style.backgroundColor = "#FF5733";
+            dislikeBtn.style.color = "white";
+            isDisliked = false;
+          }
+          isLiked = true;
+        }
+      }
+
+      // Функция для увеличения количества дизлайков
+      function dislike() {
+        if (isDisliked) {
+          dislikes--;
+          document.getElementById("dislikes").textContent = dislikes;
+          dislikeBtn.style.backgroundColor = "#FF5733";
+          dislikeBtn.style.color = "white";
+          isDisliked = false;
+        } else {
+          dislikes++;
+          document.getElementById("dislikes").textContent = dislikes;
+          dislikeBtn.style.backgroundColor = "red";
+          dislikeBtn.style.color = "white";
+          if (isLiked) {
+            likes--;
+            document.getElementById("likes").textContent = likes;
+            likeBtn.style.backgroundColor = "#4CAF50";
+            likeBtn.style.color = "white";
+            isLiked = false;
+          }
+          isDisliked = true;
+        }
+      }
+    </script>
+  </body>
+
+  <script>
+    const loadingElement = document.querySelector(".loading");
+    const bodyElement = document.querySelector("body");
+
+    function removeLoading() {
+      loadingElement.remove();
+      bodyElement.classList.remove("loading-active");
+    }
+    setTimeout(removeLoading, 1000);
+    bodyElement.classList.add("loading-active");
+  </script>
+</html>

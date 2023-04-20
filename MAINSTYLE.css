@@ -1,9 +1,12 @@
+html * {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #42455a;
+  padding-top: 100px;
 }
-p {
-  font-size: 26px;
-}
+
 a {
   display: inline-block;
   position: relative;
@@ -17,12 +20,12 @@ a {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   width: 360px;
 }
+
 a:hover {
   color: #333;
   background-color: #00ba78;
 }
 
-/*-----------ТАБЛИЦА-----------*/
 table {
   margin: auto;
   width: auto;
@@ -48,18 +51,22 @@ td {
 
 /*-----------КНОПКА-----------*/
 .my-btn {
-  color: #00ba78;
-  display: block;
-  padding: 10px;
+  display: inline-block;
+  padding: 12px 24px;
   font-size: 18px;
+  font-weight: 500;
   background-color: #222;
+  color: #00ba78;
   text-decoration: none;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .my-btn:hover {
-  color: #333;
+  color: #fff;
   background-color: #00ba78;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
